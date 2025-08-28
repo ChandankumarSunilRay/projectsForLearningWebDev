@@ -1,5 +1,6 @@
 # Ignore all node_modules everywhere
 **/node_modules/
+.gitignore
 
 # Logs
 **/*.log
