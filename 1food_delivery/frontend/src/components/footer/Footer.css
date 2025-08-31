@@ -57,3 +57,17 @@ color: white;
     border: none;
 
 }
+
+@media(max-width:750){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+    }
+    .footer-copyrightt{
+        text-align: center;
+        
+    }   
+
+}
