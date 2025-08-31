@@ -4,7 +4,7 @@ import './Navbar.css'
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
     const [menu, setMenu] = useState("mobile-app");
 
@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="dot"></div>
 
                 </div>
-                <button>Sign in</button>
+                <button onClick={()=>setShowLogin(true)}>Sign in</button>
             </div>
         </div>
     )
