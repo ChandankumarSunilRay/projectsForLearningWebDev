@@ -20,7 +20,7 @@ const Navbar = ({setShowLogin}) => {
             <div className="navbar-right">
                 <img src={frontend_assets.search_icon} alt="Loading" />
                 <div className='navbar-search-icon'>
-                    <img src={frontend_assets.basket_icon} alt="" />
+                    <Link to={"/cart"}><img src={frontend_assets.basket_icon} alt="loading" /></Link>
                     <div className="dot"></div>
 
                 </div>
