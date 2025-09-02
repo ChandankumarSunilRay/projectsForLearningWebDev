@@ -1,12 +1,14 @@
 import { admin_assets } from '../../assets/admin_assets/admin_assets.js'
 import { frontend_assets } from '../../assets/frontend_assets/frontend_assets.js'
+import { StoreContext } from '../../context/StoreContext.jsx'
 import './Navbar.css'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {Link} from 'react-router-dom'
 
 const Navbar = ({setShowLogin}) => {
 
     const [menu, setMenu] = useState("mobile-app");
+    const {getTotalCartAmount} = useContext(StoreContext)
 
     return (
         <div className='navbar'>
@@ -21,7 +23,7 @@ const Navbar = ({setShowLogin}) => {
                 <img src={frontend_assets.search_icon} alt="Loading" />
                 <div className='navbar-search-icon'>
                     <Link to={"/cart"}><img src={frontend_assets.basket_icon} alt="loading" /></Link>
-                    <div className="dot"></div>
+                    <div className={getTotalCartAmount()===0?"":"dot"}></div>
 
                 </div>
                 <button onClick={()=>setShowLogin(true)}>Sign in</button>
