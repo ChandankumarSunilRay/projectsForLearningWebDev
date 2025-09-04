@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Add.css'
 import { assets } from '../../assets/assets'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const Add = () => {
     const url = "http://localhost:4000";
@@ -9,7 +10,7 @@ const Add = () => {
     const [image, setImage] = useState(false);
     const [data, setData] = useState({ name: "", description: "", price: "", category: "Salad", })
 
-    const onChangeHandler = () => {
+    const onChangeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setData(data => ({ ...data, [name]: value }))
@@ -28,8 +29,10 @@ const Add = () => {
         const response = await axios.post(`${url}/api/food/add`, formData);
         if (response.data.success) {
             setData({ name: "", description: "", price: "", category: "Salad", })
-        } else {
             setImage(false)
+            toast.success(response.data.message)
+        } else {
+            toast.error(response.data.message)
         }
     }
 
