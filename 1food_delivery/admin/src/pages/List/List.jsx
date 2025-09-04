@@ -10,7 +10,7 @@ const List = () => {
 
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`)
-    console.log(response.data);
+    // console.log(response.data);
     if (response.data.success) {
       setList(response.data.data)
 
@@ -18,6 +18,21 @@ const List = () => {
       toast.error("Error")
     }
   }
+
+
+  const removeFood = async (foodId) => {
+    try {
+      const response = await axios.post(`${url}/api/food/remove`, { id: foodId });
+      if (response.data.success) {
+        toast.success(response.data.message);
+        fetchList();
+      } else {
+        toast.error("Error removing food");
+      }
+    } catch (err) {
+      toast.error("Server error");
+    }
+  };
 
   useEffect(() => {
     fetchList();
@@ -37,7 +52,7 @@ const List = () => {
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>₹{item.price}</p>
-              <p>X</p>
+              <p onClick={() => removeFood(item._id)} className='cursor'>X</p>
 
             </div>
           )
