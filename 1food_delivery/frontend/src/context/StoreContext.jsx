@@ -64,18 +64,31 @@ const StoreContextProvider = (props) => {
   }
 
 
+  // useEffect(() => {
+
+  //   async function loadData() {
+  //     await fetchFoodList();
+  //     if (localStorage.getItem("token")) {
+  //       setToken(localStorage.getItem("token"))
+  //       await loadCartData(localStorage.getItem("token"))
+  //     }
+  //   }
+
+  //   loadData();
+  // })
   useEffect(() => {
-
-    async function loadData() {
-      await fetchFoodList();
-      if (localStorage.getItem("token")) {
-        setToken(localStorage.getItem("token"))
-        await loadCartData(localStorage.getItem("token"))
-      }
+  async function loadData() {
+    await fetchFoodList();
+    if (localStorage.getItem("token")) {
+      const savedToken = localStorage.getItem("token");
+      setToken(savedToken);
+      await loadCartData(savedToken);
     }
+  }
 
-    loadData();
-  })
+  loadData();
+}, []); 
+
 
 
   const contextValue = {
