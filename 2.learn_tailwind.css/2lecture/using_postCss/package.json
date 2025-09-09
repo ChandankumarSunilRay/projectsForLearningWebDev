@@ -1,5 +1,6 @@
 {"scripts": {
-  "start": "vite"
+  "start": "vite",
+  "build": "postcss script.css -o output.css --watch"
 },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
