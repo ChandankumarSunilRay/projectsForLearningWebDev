@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Groceries in 15 Minutes</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="https://unpkg.com/@tailwindcss/forms"></script>
   <style>
-    /* Simple fade-in animation */
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -25,42 +23,50 @@
   </style>
 </head>
 
-<body class="bg-gray-900">
+<body class="bg-gray-100">
   <!-- Container -->
   <div class="relative min-h-screen bg-[url('images/image.png')] bg-center bg-cover flex flex-col">
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-white/70"></div>
+
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 md:px-20 py-6 bg-black/40 backdrop-blur-sm sticky top-0 z-50">
-      <img class="w-36 md:w-44 cursor-pointer hover:scale-105 transition-transform" src="images/logo.png" alt="logo" />
+    <nav class="flex items-center justify-between px-8 md:px-20 py-6 bg-white shadow-md sticky top-0 z-50">
+      <img class="w-36 md:w-44 cursor-pointer hover:scale-105 transition-transform"
+        src="images/logo.png" alt="logo" />
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex gap-8 text-white font-medium">
-        <li><a href="#" class="hover:text-yellow-300 transition">Home</a></li>
-        <li><a href="#" class="hover:text-yellow-300 transition">About</a></li>
-        <li><a href="#" class="hover:text-yellow-300 transition">Features</a></li>
-        <li><a href="#" class="hover:text-yellow-300 transition">Contact</a></li>
+      <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
+        <li><a href="#" class="hover:text-yellow-500 transition">Home</a></li>
+        <li><a href="#" class="hover:text-sky-500 transition">About</a></li>
+        <li><a href="#" class="hover:text-green-500 transition">Features</a></li>
+        <li><a href="#" class="hover:text-pink-500 transition">Contact</a></li>
       </ul>
       <div class="flex items-center gap-6">
         <img class="w-8 cursor-pointer hover:scale-110 transition-transform" src="images/cart.png" alt="cart" />
-        <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
+        <button id="menuBtn" class="md:hidden text-gray-800 text-3xl">&#9776;</button>
       </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden flex-col items-center bg-black/80 text-white py-6 space-y-4 absolute top-[72px] left-0 w-full z-40">
-      <a href="#" class="hover:text-yellow-300 transition">Home</a>
-      <a href="#" class="hover:text-yellow-300 transition">About</a>
-      <a href="#" class="hover:text-yellow-300 transition">Features</a>
-      <a href="#" class="hover:text-yellow-300 transition">Contact</a>
+    <div id="mobileMenu"
+      class="hidden flex-col items-center bg-white text-gray-800 py-6 space-y-4 absolute top-[72px] left-0 w-full z-40 shadow-md">
+      <a href="#" class="hover:text-yellow-500 transition">Home</a>
+      <a href="#" class="hover:text-sky-500 transition">About</a>
+      <a href="#" class="hover:text-green-500 transition">Features</a>
+      <a href="#" class="hover:text-pink-500 transition">Contact</a>
     </div>
 
     <!-- Hero Section -->
-    <div class="flex flex-col-reverse xl:flex-row items-center flex-1 px-8 md:px-20">
+    <div class="relative flex flex-col-reverse xl:flex-row items-center flex-1 px-8 md:px-20">
       <!-- Text -->
-      <div class="text-white max-w-lg mt-10 xl:mt-0 fade-up">
+      <div class="text-gray-900 max-w-lg mt-10 xl:mt-0 fade-up">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight">
           Groceries <br />
-          delivery in <span class="font-light text-yellow-300">15 min</span>
+          delivery in 
+          <span class="text-yellow-500 font-extrabold">
+            15 min
+          </span>
         </h1>
-        <p class="mt-4 text-gray-200">
+        <p class="mt-4 text-gray-700">
           Grocify offers a wide range of products including fresh produce,
           meats, dairy, baked goods, and non-perishable items—all delivered to
           your door quickly.
@@ -68,10 +74,10 @@
 
         <div class="mt-8 flex gap-6">
           <a href="#"
-            class="bg-yellow-300 text-gray-900 rounded-full py-3 px-8 font-semibold shadow-lg hover:bg-yellow-400 hover:scale-105 transition-transform duration-300">
+            class="bg-yellow-400 text-gray-900 rounded-full py-3 px-8 font-semibold shadow-md hover:bg-yellow-500 hover:scale-105 transition-transform duration-300">
             Order Now
           </a>
-          <a href="#" class="flex items-center gap-2 text-white hover:text-yellow-300 transition">
+          <a href="#" class="flex items-center gap-2 text-gray-800 hover:text-yellow-500 transition">
             Download App <span class="text-xl rotate-90">&#10148;</span>
           </a>
         </div>
@@ -79,7 +85,8 @@
 
       <!-- Image -->
       <div class="flex justify-center xl:justify-end flex-1 fade-up">
-        <img class="w-3/4 md:w-2/3 xl:w-[500px] drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+        <img
+          class="w-3/4 md:w-2/3 xl:w-[500px] drop-shadow-lg hover:scale-105 transition-transform duration-500"
           src="images/grocery-image.png" alt="grocery" />
       </div>
     </div>
