@@ -20,23 +20,28 @@
     .fade-up {
       animation: fadeInUp 1s ease forwards;
     }
+    
+    .active {
+      color: #0ea5e9;
+      font-weight: 600;
+      border-bottom: 2px solid #0ea5e9;
+      padding-bottom: 4px;
+    }
   </style>
 </head>
 
 <body class="bg-gray-100">
-  <!-- Container -->
+  
   <div class="relative min-h-screen bg-[url('images/image.png')] bg-center bg-cover flex flex-col">
-    <!-- Overlay for readability -->
     <div class="absolute inset-0 bg-white/70"></div>
 
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 md:px-20 py-6 bg-white shadow-md sticky top-0 z-50">
+    <nav class="flex items-center justify-between px-8 md:px-20 py-6 bg-sky-100 shadow-md sticky top-0 z-50">
       <img class="w-36 md:w-44 cursor-pointer hover:scale-105 transition-transform"
         src="images/logo.png" alt="logo" />
-      <!-- Desktop Menu -->
+      
       <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
-        <li><a href="#" class="hover:text-yellow-500 transition">Home</a></li>
-        <li><a href="#" class="hover:text-sky-500 transition">About</a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-500 transition">About</a></li>
         <li><a href="#" class="hover:text-green-500 transition">Features</a></li>
         <li><a href="#" class="hover:text-pink-500 transition">Contact</a></li>
       </ul>
@@ -46,18 +51,18 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
+
     <div id="mobileMenu"
-      class="hidden flex-col items-center bg-white text-gray-800 py-6 space-y-4 absolute top-[72px] left-0 w-full z-40 shadow-md">
-      <a href="#" class="hover:text-yellow-500 transition">Home</a>
-      <a href="#" class="hover:text-sky-500 transition">About</a>
+      class="hidden flex-col items-center bg-sky-100 text-gray-800 py-6 space-y-4 absolute top-[72px] left-0 w-full z-40 shadow-md">
+      <a href="#" class="active">Home</a>
+      <a href="#" class="hover:text-yellow-500 transition">About</a>
       <a href="#" class="hover:text-green-500 transition">Features</a>
       <a href="#" class="hover:text-pink-500 transition">Contact</a>
     </div>
 
-    <!-- Hero Section -->
+
     <div class="relative flex flex-col-reverse xl:flex-row items-center flex-1 px-8 md:px-20">
-      <!-- Text -->
+
       <div class="text-gray-900 max-w-lg mt-10 xl:mt-0 fade-up">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight">
           Groceries <br />
@@ -83,7 +88,7 @@
         </div>
       </div>
 
-      <!-- Image -->
+      
       <div class="flex justify-center xl:justify-end flex-1 fade-up">
         <img
           class="w-3/4 md:w-2/3 xl:w-[500px] drop-shadow-lg hover:scale-105 transition-transform duration-500"
@@ -93,7 +98,7 @@
   </div>
 
   <script>
-    // Mobile menu toggle
+    
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
     menuBtn.addEventListener("click", () => {
