@@ -20,9 +20,9 @@
     .fade-up {
       animation: fadeInUp 1s ease forwards;
     }
-    /* Active link style */
+    
     .active {
-      color: #1f2937; /* dark text */
+      color: #1f2937; 
       font-weight: 700;
       border-bottom: 2px solid #1f2937;
       padding-bottom: 4px;
@@ -31,16 +31,16 @@
 </head>
 
 <body class="bg-gray-100">
-  <!-- Container -->
+  
   <div class="relative min-h-screen bg-[url('images/image.png')] bg-center bg-cover flex flex-col">
-    <!-- Overlay for readability -->
+
     <div class="absolute inset-0 bg-white/70"></div>
 
-    <!-- Navbar -->
+
     <nav class="flex items-center justify-between px-8 md:px-20 py-6 bg-yellow-400 shadow-md sticky top-0 z-50">
       <img class="w-36 md:w-44 cursor-pointer hover:scale-105 transition-transform"
         src="images/logo.png" alt="logo" />
-      <!-- Desktop Menu -->
+      
       <ul class="hidden md:flex gap-8 text-gray-900 font-medium">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#" class="hover:text-gray-700 transition">About</a></li>
@@ -53,7 +53,7 @@
       </div>
     </nav>
 
-    <!-- Mobile Menu -->
+
     <div id="mobileMenu"
       class="hidden flex-col items-center bg-yellow-400 text-gray-900 py-6 space-y-4 absolute top-[72px] left-0 w-full z-40 shadow-md">
       <a href="#" class="active">Home</a>
@@ -62,9 +62,9 @@
       <a href="#" class="hover:text-gray-700 transition">Contact</a>
     </div>
 
-    <!-- Hero Section -->
+
     <div class="relative flex flex-col-reverse xl:flex-row items-center flex-1 px-8 md:px-20">
-      <!-- Text -->
+      
       <div class="text-gray-900 max-w-lg mt-10 xl:mt-0 fade-up">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight">
           Groceries <br />
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <!-- Image -->
+      
       <div class="flex justify-center xl:justify-end flex-1 fade-up">
         <img
           class="w-3/4 md:w-2/3 xl:w-[500px] drop-shadow-lg hover:scale-105 transition-transform duration-500"
@@ -100,7 +100,7 @@
   </div>
 
   <script>
-    // Mobile menu toggle
+    
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
     menuBtn.addEventListener("click", () => {
