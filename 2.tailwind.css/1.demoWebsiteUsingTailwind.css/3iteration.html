@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-white font-semibold text-xl">My Website</div>
+            <ul class="flex space-x-6">
+                <li>
+                    <a href="#home" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="home">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="about">About</a>
+                </li>
+                <li>
+                    <a href="#product" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="product">Product</a>
+                </li>
+                <li>
+                    <a href="#feedback" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="feedback">Feedback</a>
+                </li>
+                <li>
+                    <a href="#contact" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-blue-200">
+        <div class="text-center text-white">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Website</h1>
+            <p class="text-xl">Explore our products and learn more about us.</p>
+        </div>
+    </section>
+
+
+    <script>
+        // Add active class to navigation on scroll
+        const navLinks = document.querySelectorAll('nav ul li a');
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - sectionHeight / 2) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('bg-blue-700');
+                } else {
+                    link.classList.remove('bg-blue-700');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
