@@ -1,68 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Tailwind Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth transitions */
+    .nav-link {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .nav-link:hover {
+      background-color: #2b6cb0;
+      transform: scale(1.05);
+    }
+    /* Mobile nav slide transition */
+    #mobile-nav-links {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-600 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-white font-semibold text-xl">My Website</div>
-            <ul class="flex space-x-6">
-                <li>
-                    <a href="#home" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="home">Home</a>
-                </li>
-                <li>
-                    <a href="#about" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="about">About</a>
-                </li>
-                <li>
-                    <a href="#product" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="product">Product</a>
-                </li>
-                <li>
-                    <a href="#feedback" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="feedback">Feedback</a>
-                </li>
-                <li>
-                    <a href="#contact" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md" id="contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="bg-blue-600 p-4 fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-white font-semibold text-xl">My Website</div>
 
-    <!-- Home Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-blue-200">
-        <div class="text-center text-white">
-            <h1 class="text-4xl font-bold mb-4">Welcome to Our Website</h1>
-            <p class="text-xl">Explore our products and learn more about us.</p>
-        </div>
-    </section>
+      <!-- Hamburger Button -->
+      <button id="hamburger-btn" class="text-white lg:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
 
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex space-x-6" id="nav-links">
+        <li><a href="#home" class="nav-link text-white px-3 py-2 rounded-md">Home</a></li>
+        <li><a href="#about" class="nav-link text-white px-3 py-2 rounded-md">About</a></li>
+        <li><a href="#product" class="nav-link text-white px-3 py-2 rounded-md">Product</a></li>
+        <li><a href="#feedback" class="nav-link text-white px-3 py-2 rounded-md">Feedback</a></li>
+        <li><a href="#contact" class="nav-link text-white px-3 py-2 rounded-md">Contact Us</a></li>
+      </ul>
+    </div>
 
-    <script>
-        // Add active class to navigation on scroll
-        const navLinks = document.querySelectorAll('nav ul li a');
-        window.addEventListener('scroll', () => {
-            let currentSection = '';
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop - sectionHeight / 2) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
+    <!-- Mobile Nav -->
+    <ul id="mobile-nav-links" class="lg:hidden absolute left-0 top-[64px] w-full bg-blue-600 p-4 space-y-4 transform -translate-y-full">
+      <li><a href="#home" class="nav-link text-white block px-3 py-2 rounded-md">Home</a></li>
+      <li><a href="#about" class="nav-link text-white block px-3 py-2 rounded-md">About</a></li>
+      <li><a href="#product" class="nav-link text-white block px-3 py-2 rounded-md">Product</a></li>
+      <li><a href="#feedback" class="nav-link text-white block px-3 py-2 rounded-md">Feedback</a></li>
+      <li><a href="#contact" class="nav-link text-white block px-3 py-2 rounded-md">Contact Us</a></li>
+    </ul>
+  </nav>
 
-            navLinks.forEach(link => {
-                if (link.getAttribute('href').substring(1) === currentSection) {
-                    link.classList.add('bg-blue-700');
-                } else {
-                    link.classList.remove('bg-blue-700');
-                }
-            });
-        });
-    </script>
+  <!-- Sections -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-blue-200 pt-24">
+    <div class="text-center text-white">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Our Website</h1>
+      <p class="text-xl">Explore our products and learn more about us.</p>
+    </div>
+  </section>
+
+  <section id="about" class="min-h-screen flex items-center justify-center bg-green-200">
+    <h2 class="text-3xl">About Us</h2>
+  </section>
+
+  <section id="product" class="min-h-screen flex items-center justify-center bg-yellow-200">
+    <h2 class="text-3xl">Our Products</h2>
+  </section>
+
+  <section id="feedback" class="min-h-screen flex items-center justify-center bg-purple-200">
+    <h2 class="text-3xl">Feedback</h2>
+  </section>
+
+  <section id="contact" class="min-h-screen flex items-center justify-center bg-pink-200">
+    <h2 class="text-3xl">Contact Us</h2>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileNavLinks = document.getElementById('mobile-nav-links');
+    const allNavLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle mobile nav
+    hamburgerBtn.addEventListener('click', () => {
+      mobileNavLinks.classList.toggle('translate-y-0');
+      mobileNavLinks.classList.toggle('-translate-y-full');
+    });
+
+    // Close mobile menu on link click
+    allNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          mobileNavLinks.classList.add('-translate-y-full');
+          mobileNavLinks.classList.remove('translate-y-0');
+        }
+      });
+    });
+
+    // Highlight active section in nav
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      document.querySelectorAll('section').forEach(section => {
+        const top = window.scrollY;
+        const offset = section.offsetTop - 100;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+          currentSection = id;
+        }
+      });
+
+      allNavLinks.forEach(link => {
+        const href = link.getAttribute('href').substring(1);
+        if (href === currentSection) {
+          link.classList.add('bg-blue-700');
+        } else {
+          link.classList.remove('bg-blue-700');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
