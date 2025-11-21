@@ -25,11 +25,10 @@ const myArr2 = new Array(1, 2, 3, 4, 5)
 // console.log(newArr);
 
 
-console.log(myArr);   
+// console.log(myArr);                      // main one   
 
 
 // slice and splice has to be revised again
 // slice don't delete data from array wheereas splice it always modifies the original array
-
 
 
