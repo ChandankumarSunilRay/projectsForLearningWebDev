@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL FLEXBOX PROPERTIES</title>
+    <title>Complete Flexbox Properties</title>
 
     <style>
         * {
@@ -18,16 +18,15 @@
             margin: 20px 0;
         }
 
-        /* FLEX CONTAINER PROPERTIES */
+        /* FLEX CONTAINER (ALL PROPERTIES)*/
         #container {
             width: 90%;
-            min-height: 350px;
+            min-height: 300px;
             border: 3px solid red;
             padding: 10px;
             margin: 20px auto;
 
             display: flex;
-            /* ENABLE FLEXBOX */
 
             flex-direction: row;
             /* row | row-reverse | column | column-reverse */
@@ -36,7 +35,7 @@
             /* nowrap | wrap | wrap-reverse */
 
             flex-flow: row wrap;
-            /* shorthand for flex-direction + flex-wrap */
+            /* shorthand for direction + wrap */
 
             justify-content: center;
             /* flex-start | flex-end | center | space-between | space-around | space-evenly */
@@ -47,12 +46,15 @@
             align-content: center;
             /* flex-start | flex-end | center | space-between | space-around | stretch */
 
+            /* GAP FAMILY */
             gap: 15px;
-            /* Space between flex items */
+            /* shorthand */
+            row-gap: 15px;
+            column-gap: 15px;
         }
 
 
-        /* FLEX ITEM PROPERTIES*/
+        /* FLEX ITEM (ALL PROPERTIES) */
         .box {
             width: 120px;
             height: 120px;
@@ -62,22 +64,22 @@
             align-items: center;
             font-weight: bold;
 
-            /* The following 3 are part of Flexbox core: */
-            flex-grow: 0;
-            /* how much item can grow */
-            flex-shrink: 1;
-            /* how much item can shrink */
-            flex-basis: 120px;
-            /* initial width before growing/shrinking */
+            order: 0;
+            /* default order */
 
-            /* Shorthand for grow, shrink, basis */
+            flex-grow: 0;
+            /* how much item grows */
+            flex-shrink: 1;
+            /* how much item shrinks */
+            flex-basis: 120px;
+            /* base width */
+
             flex: 0 1 120px;
-            /* (same as above) */
+            /* shorthand: grow shrink basis */
 
             align-self: auto;
             /* flex-start | flex-end | center | baseline | stretch */
         }
-
 
         /* COLORS */
         #box1 {
@@ -110,7 +112,7 @@
 
 <body>
 
-    <h1>ALL FLEXBOX PROPERTIES (Beginner-Friendly)</h1>
+    <h1>ALL FLEXBOX PROPERTIES (100% COMPLETE)</h1>
 
     <div id="container">
         <div id="box1" class="box">Item 1</div>
