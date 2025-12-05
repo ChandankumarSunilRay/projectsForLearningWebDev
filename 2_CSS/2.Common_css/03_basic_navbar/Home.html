@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        h1{
+            margin-bottom: 10px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 3px solid black;
+
+        }
+        .navbar {
+            border: 2px solid red;
+            display: flex;
+            gap: 22px;
+            height: 40px;
+            width: 600px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+
+        }
+
+        .nav-child {
+            list-style: none;
+            cursor: pointer;
+
+
+        }
+
+        .nav-child:hover {
+            color: red;
+        }
+
+        .section-main {
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .section-main-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+
+
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+
+        }
+
+        .section-main-card input {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #button {
+            display: flex;
+        }
+
+        #sectionn {
+            border: 3px solid red;
+            border-radius: 10px;
+            padding: 50px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navbar">
+            <li class="nav-child ">
+                <a href="./Home.html">Home</a>
+            </li>
+            <li class="nav-child ">
+                <a href="./Product.html">Product</a>
+
+            </li>
+            <li class="nav-child ">
+                <a href="./About.html">About</a>
+
+            </li>
+            <li class="nav-child ">
+                <a href="./Feedback.html">Feedback</a>
+
+            </li>
+            <li class="nav-child ">
+                <a href="./Contact.html">Contact</a>
+
+            </li>
+        </ul>
+    </nav>
+    <section id="sectionn">
+        <div class="section-main">
+            <div class="section-main-card">
+                <div>
+                    <h1>This is Home page</h1>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name !">
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" placeholder="Enter your age !">
+                </div>
+
+                <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Enter your Address !">
+                </div>
+                <div>
+                    <label for="monthly-income">Monthly-income:</label>
+                    <input type="text" id="monthly-income" placeholder="Enter your monthly-income !">
+                </div>
+
+            </div>
+            <div id="button">
+                <button>Submit</button>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
