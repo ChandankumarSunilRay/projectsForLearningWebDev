@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class operators {
 
     static void main(String[] args) {
@@ -74,6 +75,15 @@ public class operators {
             --we can use nextLong(),nextFloat(),nextDouble(),and next() methods to get long, float, double, and string input respectively from the user.
             -It is recommended to close the scanner object once the input is taken using the close() method
         */
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter our age:");
+        int age = sc.nextInt();
+        System.out.println("Your age is "+age);
+        sc.close();
+        
+
+
+
     }
 
 }
