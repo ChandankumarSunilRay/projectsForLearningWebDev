@@ -5,6 +5,7 @@ public class ternaryOperator {
         /*
          * A ternary operator evaluates the test condition and executes a block of code
          * based on the result of the condition.
+         * condition?expression1:expression2
          * -- ?
          * -- :
          * 

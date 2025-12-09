@@ -4,7 +4,13 @@ public class HelloWorld { // this is block
     public static void main(String[] args) { // psvm (shortcut for public static void main)
         System.out.println("Hellow world ");
         System.out.println(4 + 3);
-        
+
+
+        // operators in java
+        int a = 12;
+        int b = 3;
+        int c = a + b;
+        System.out.println(c);
 
     }
 
