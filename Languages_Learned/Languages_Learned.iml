@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/java/1_Hellow_world" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java/2_reserved_keywords" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java/3_operator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java/4_ifElse" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java/5_javaTernaryOperator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java/6_javaSwitchStatements" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
