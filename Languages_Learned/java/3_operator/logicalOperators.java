@@ -4,6 +4,8 @@ public class logicalOperators {
         // && -- AND
         // || -- OR
 
+        // https://youtu.be/NNLoi8QqzaY?t=10010
+
         int time = 21 ; 
 
         if(time>=10 && time <=20){
