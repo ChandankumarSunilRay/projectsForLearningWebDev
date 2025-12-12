@@ -1,5 +1,5 @@
 public class loops {
-    // https://youtu.be/NNLoi8QqzaY?t=13501
+    // https://youtu.be/NNLoi8QqzaY?t=14088
     public static void main(String[] args) {
         // ---common way--
         // System.out.println("Loops");
@@ -14,7 +14,7 @@ public class loops {
 
         }
 
-        // ---wihle loops
+        // ---while loops:
         // in while lool we don't know how many times we want to run loop (while
         // condition don't fulfill keep running)
         int i = 1; // infinte loop (bad practice)
@@ -34,12 +34,12 @@ public class loops {
 
         // ---------------------------break and continue
         // --break means get out of loop
-        for (int i = 1; i <= 10; i++) {
+        for (int j = 1; j <= 10; j++) {
             if (i == 5) {
-                System.out.println("Break at i = " + i);
+                System.out.println("Break at i = " + j);
                 break; // Exits the for loop
             }
-            System.out.println("i = " + i);
+            System.out.println("i = " + j);
         }
         // Output:
         // i = 1
@@ -53,13 +53,14 @@ public class loops {
         // --The continue statement in Java is a loop control statement used to skip the
         // current iteration of a for, while, or do-while loop and immediately proceed
         // to the next iteration.
-        outerLoop: for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 3; j++) {
-                if (i == 2 && j == 2) {
-                    continue outerLoop; // Skips the rest of the current 'outerLoop' iteration
-                }
-                System.out.println("i = " + i + ", j = " + j);
+
+        int[] numbers = { 5, -2, 7, -1, 9 };
+
+        for (int m = 0; m < numbers.length; m++) {
+            if (numbers[m] < 0) {
+                continue; // Skip the rest of the loop body for negative numbers
             }
+            System.out.println("Processing positive number: " + numbers[m]);
         }
 
     }
