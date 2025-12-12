@@ -38,6 +38,7 @@ public class switchCaseStmt {
             default:
                 System.out.println("Enter valid day number");
         }
+        sc.close();
     }
 
 }
