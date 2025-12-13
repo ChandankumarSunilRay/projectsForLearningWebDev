@@ -23,6 +23,19 @@ public class array {
 
         int marks[] = { 54, 89, 56, 48 };
         System.out.println(marks[2]);
+
+        // iteration in an array -- for loop
+        String names[] = {"Ram","Harsh","Karan","Monty"};
+        for(int i = 0; i<names.length; i++){
+            System.out.println("Name is "+names[i]);
+
+        }
+
+        // iteration in an array using -- for-each
+        for(String name:names){
+            System.out.println("for each "+name);
+            
+        }
     }
 
 }
