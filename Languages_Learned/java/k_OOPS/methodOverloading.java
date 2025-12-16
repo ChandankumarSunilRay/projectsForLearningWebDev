@@ -1,6 +1,17 @@
 package Languages_Learned.java.k_OOPS;
 
 public class methodOverloading {
+
+    /*
+        1.Two or more methods can have the same name inside the same class if they accept different argumnts. This feature is known as method overloading.
+        2.Method overloading is achieved by either:
+        ---changing the number of arguments
+        ---or changing the data type of arguments.
+        3.It is not method overloading if only change the return type of methods.
+        --There must be differences in the number of parameters.
+
+     */
+
     public static void main(String[] args) {
         Greet obj = new Greet();
         obj.greetings();
