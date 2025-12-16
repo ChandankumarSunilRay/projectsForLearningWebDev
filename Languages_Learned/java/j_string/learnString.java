@@ -14,6 +14,26 @@ public class learnString {
         System.out.println("Your full name is "+ firstName+" "+lastName);
         sc.close();
 
+
+        // some pre-build classes for sting
+        // toUpperCase()
+        // toLowerCase
+        // .trim
+        // .startsWith()
+        // .endsWith()
+        // .equals()
+        // .equalsIgnoreCase()
+        // .chartAt()
+        // .valueOf()
+        // .replace()
+        // .contains()
+        // .substring()
+        // .split()
+        // .toCharArray()
+        // .isEmpty()
+        // .isBlank()
         
+
+    
     }
 }
