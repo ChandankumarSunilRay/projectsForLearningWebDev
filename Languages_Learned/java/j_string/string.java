@@ -10,8 +10,11 @@ public class string {
         String sameName = "Anuj";
         String newName = new String("Anuj");
 
+        
         System.out.println(name);
         System.out.println(newName);
+        System.out.println(sameName);
 
+        //.equal
     }
 }
