@@ -16,7 +16,7 @@ package Languages_Learned.java.m_OOPS3;
     Encapsulation refers to the bundling of fields and methods inside a single class. It prevents outer classes from accessing and changing fields and methods of a class This also helps to achieve data hiding.
 
 */
-public class encapsulation {
+public class encapsulationmn {
     public static void main(String[] args) {
         /*
             importing a Package
